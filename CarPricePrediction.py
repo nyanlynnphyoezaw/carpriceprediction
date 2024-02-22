@@ -39,7 +39,7 @@ st.write(pd.DataFrame(user_features, columns=['km_driven', 'fuel', 'seller_type'
 # Make predictions
 if st.button('Predict Price'):
     try:
-        model = joblib.load('/Users/nyanlynnphyoezaw/downloads/carpriceprediction.pkl')
+        model = joblib.load('carpriceprediction.pkl')
         predicted_price = model.predict(user_features)
         st.subheader('Predicted Price:')
         st.write(predicted_price)  # Display the predicted price
